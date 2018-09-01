@@ -1,0 +1,9 @@
+.footer{
+  background: $color-grey-dark-2;
+  &__copyright{
+    height: inherit;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    color: $white;
+  }
+}

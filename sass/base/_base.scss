@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+  /*Now convert all px value into rem dependent on root font-size  */
+  /*font-size: 10px; */  /*Set root font-size is 10px because  calculate rem is easy 10px == 1rem*/
+  /*default root font size is 16px*/
+  font-size: 62.5%; /* (10/16) == 0.625 => 0.625*100 == 62.5%*/
+}
+
+body{
+  box-sizing: border-box;
+}

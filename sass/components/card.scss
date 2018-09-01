@@ -1,0 +1,164 @@
+/*******************************  Example of card  *******************************
+
+<div class="card">
+    <div class="card__side card__side--front">
+        <figure class="card__img card__img--1"></figure> // use background image
+        <h4 class="card__heading">
+            <span class="card__heading--span card__heading--span--1">The sea Explore</span>
+        </h4>
+        <div class="card__details">
+            <ul>
+                <li>3 day tour</li>
+                <li>Up to 30 people</li>
+                <li>2 tour guides</li>
+                <li>Sleep in cozy hostels</li>
+                <li>Diffculty very easy</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card__side card__side--back card__side--back--1">
+        <div class="card__cta">
+            <div class="card__price-box">
+                <p class="card__price-only">only</p>
+                <p class="card__price-value">$249.5</p>
+            </div>
+            <a href="#" class="btn btn--white">Book Now!</a>
+        </div>
+    </div>
+</div>
+
+**********************************************************************************/
+
+.card {
+  perspective: 150rem;
+  height: 55rem;
+
+
+  &__side{
+    width: 100%;
+    height: 55rem;
+    transition: all .8s ease;
+    position: absolute;
+    top:0;
+    left:0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, .15);
+    overflow: hidden;
+
+    &--front{
+      background-color: $white;
+    }
+    &--back{
+      transform: rotateY(180deg);
+      &--1{
+        background: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+      &--2{
+        background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+      &--3{
+        background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
+
+    }
+  }
+
+  &:hover &__side--front{
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back{
+    transform: rotateY(0);
+  }
+
+  &__img{
+    height: 25rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &--1{
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8)),url("../assets/img/nat-5.jpg");
+    }
+    &--2{
+      background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),url("../assets/img/nat-6.jpg");
+    }
+    &--3{
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.8), rgba($color-tertiary-dark, 0.8)),url("../assets/img/nat-7.jpg");
+    }
+
+  }
+
+  &__heading{
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+    &--span{
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      -box-decoration-break: clone;
+      &--1{
+        background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8));
+      }
+      &--2{
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8));
+      }
+      &--3{
+        background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.8), rgba($color-tertiary-dark, 0.8));
+      }
+
+    }
+  }
+
+  &__details{
+    padding: 3rem;
+    ul{
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li{
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        &:not(:last-child){
+          border-bottom: 1px solid $color-grey-light-2;
+
+        }
+      }
+    }
+  }
+
+
+  &__cta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform:  translate(-50%, -50%);
+    width:90%;
+    text-align: center;
+
+  }
+
+  &__price-box{
+    text-align: center;
+    color:$white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  &__price-value{
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}

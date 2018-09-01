@@ -1,0 +1,47 @@
+/*******************************  Example of image gallery  *******************************
+
+ <div class="composition">
+    <img src="assets/img/nat-1-large.jpg" alt="" class="composition__photo composition__photo--p1">
+    <img src="assets/img/nat-2-large.jpg" alt="" class="composition__photo composition__photo--p2">
+    <img src="assets/img/nat-3-large.jpg" alt="" class="composition__photo composition__photo--p3">
+ </div>
+
+***************************************************************************************/
+
+.composition{
+  position: relative;
+  &__photo{
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($black, .4);
+    border-radius: 2px ;
+    position: absolute;
+    z-index: 1;
+    transition: all .2s;
+    outline-offset: 1.5rem;
+
+
+    &--p1{
+      top : -2rem;
+      left: 0;
+    }
+    &--p2{
+      top : 2rem;
+      right: 0;
+    }
+    &--p3{
+      top : 10rem;
+      left: 20%;
+    }
+
+    &:hover{
+      outline: 1.5rem solid $color-primary;
+      box-shadow: 0 2rem 4rem rgba($black, .5);
+      z-index: 2;
+      transform: scale(1.15);
+    }
+  }
+
+  &:hover  &__photo:not(:hover){
+    transform: scale(.9);
+  }
+}

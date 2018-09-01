@@ -1,0 +1,4 @@
+.main-container{
+  min-height: calc(100vh - (#{$header-height} + 4rem));
+  background: $color-grey-light-1;
+}
