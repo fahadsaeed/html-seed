@@ -3,3 +3,9 @@
 
 # IDEs and editors
 /.idea
+
+# dist folder
+/dist
+
+# src client
+/src/client
