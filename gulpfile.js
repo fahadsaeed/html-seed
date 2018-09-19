@@ -38,9 +38,17 @@ var del = require('del');
 // Combining Gulp tasks
 var runSequence = require('run-sequence');
 
+// html minify
+var htmlmin = require('gulp-htmlmin');
+
+// CSS minify
+var cssnano = require('gulp-cssnano');
+
+// Convert ES6 to ES5 js
+var babel = require('gulp-babel');
 
 gulp.task('sass', function(){
-    return gulp.src('src/sass/**/*.scss')
+    return gulp.src('src/sass/*.scss')
         .pipe(sass()) // Converts Sass to CSS with gulp-sass
         .pipe(gulp.dest('src/client/css'))
         .pipe(browserSync.reload({
@@ -49,7 +57,7 @@ gulp.task('sass', function(){
 });
 
 
-gulp.task('watch', ['browserSync', 'sass'], function (){
+gulp.task('serve', ['browserSync', 'sass'], function (){
     // Reloads the browser whenever CSS, HTML or JS files change
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/*.html', browserSync.reload);
@@ -69,9 +77,9 @@ gulp.task('browserSync', function() {
 gulp.task('useref', function(){
     return gulp.src('src/*.html')
         .pipe(useref())
-        // .pipe(gulpIf('src/js/*.js', uglify()))
         .pipe(gulp.dest('dist'))
 });
+
 
 gulp.task('assets', function() {
     return gulp.src('src/assets/**/*')
@@ -88,16 +96,49 @@ gulp.task('build', function () {
     runSequence('clean:dist',
         ['sass', 'useref', 'assets'],
         function (cb) {
+            gulp.start('build:minify');
+        }
+    )
+});
+
+
+gulp.task('build:minify', function () {
+    runSequence(['html:minify', 'css:minify', 'es6:js:minify'],
+        function (cb) {
             console.log('Build success completed!');
         }
     )
 });
 
-gulp.task('serve', function () {
-    gulp.start('watch');
+// Gulp task to minify HTML files
+gulp.task('html:minify', function() {
+    return gulp.src(['dist/*.html'])
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true
+        }))
+        .pipe(gulp.dest('dist'));
 });
 
+// Gulp task to minify HTML files
+gulp.task('css:minify', function() {
+    return gulp.src(['dist/css/*.css'])
+        .pipe(gulpIf('*.css', cssnano()))
+        .pipe(gulp.dest('dist/css'));
+});
+
+// Gulp task to minify convert es6 to es5 files
+gulp.task('es6:js:minify', () =>
+    gulp.src('dist/js/app.min.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulp.dest('dist/js'))
+);
+
+
 gulp.task('default', function() {
-    gulp.start('watch');
+    gulp.start('serve');
 });
 
