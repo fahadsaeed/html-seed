@@ -1,0 +1,373 @@
+
+.u-m{
+  margin: $space;
+}
+.u-m-xs{
+  margin: $space-xs;
+}
+.u-m-sm{
+  margin: $space-sm;
+}
+.u-m-md{
+  margin: $space-md;
+}
+.u-m-lg{
+  margin: $space-lg;
+}
+
+.u-m-x{
+  margin-left: $space;
+  margin-right: $space;
+}
+.u-m-x-xs{
+  margin-left: $space-xs;
+  margin-right: $space-xs;
+}
+.u-m-x-sm{
+  margin-left: $space-sm;
+  margin-right: $space-sm;
+}
+.u-m-x-md{
+  margin-left: $space-md;
+  margin-right: $space-md;
+}
+.u-m-x-lg{
+  margin-left: $space-lg;
+  margin-right: $space-lg;
+}
+
+.u-m-y{
+  margin-top: $space;
+  margin-bottom: $space;
+}
+.u-m-y-xs{
+  margin-top: $space-xs;
+  margin-bottom: $space-xs;
+}
+.u-m-y-sm{
+  margin-top: $space-sm;
+  margin-bottom: $space-sm;
+}
+.u-m-y-md{
+  margin-top: $space-md;
+  margin-bottom: $space-md;
+}
+.u-m-y-lg{
+  margin-top: $space-lg;
+  margin-bottom: $space-lg;
+
+}
+
+.u-m-t{
+  margin-top: $space;
+}
+.u-m-t-xs{
+  margin-top: $space-xs;
+}
+.u-m-t-sm{
+  margin-top: $space-sm;
+}
+.u-m-t-md{
+  margin-top: $space-md;
+}
+.u-m-t-lg{
+  margin-top: $space-lg;
+}
+
+.u-m-b{
+  margin-bottom: $space;
+}
+.u-m-b-xs{
+  margin-bottom: $space-xs;
+}
+.u-m-b-sm{
+  margin-bottom: $space-sm;
+}
+.u-m-b-md{
+  margin-bottom: $space-md;
+}
+.u-m-b-lg{
+  margin-bottom: $space-lg;
+}
+
+.u-m-l{
+  margin-left: $space
+}
+.u-m-l-xs{
+  margin-left: $space-xs;
+}
+.u-m-l-sm{
+  margin-left: $space-sm;
+}
+.u-m-l-md{
+  margin-left: $space-md;
+}
+.u-m-l-lg{
+  margin-left: $space-lg;
+}
+
+.u-m-r{
+  margin-right: $space;
+}
+.u-m-r-xs{
+  margin-right: $space-xs;
+}
+.u-m-r-sm{
+  margin-right: $space-sm;
+}
+.u-m-r-md{
+  margin-right: $space-md
+}
+.u-m-r-lg{
+  margin-right: $space-lg;
+}
+
+@include responsive(phone){
+  .u-m{
+    margin: $phone-space;
+  }
+  .u-m-xs{
+    margin: $phone-space-xs;
+  }
+  .u-m-sm{
+    margin: $phone-space-sm;
+  }
+  .u-m-md{
+    margin: $phone-space-md;
+  }
+  .u-m-lg{
+    margin: $phone-space-lg;
+  }
+
+  .u-m-x{
+    margin-left: $phone-space;
+    margin-right: $phone-space;
+  }
+  .u-m-x-xs{
+    margin-left: $phone-space-xs;
+    margin-right: $phone-space-xs;
+  }
+  .u-m-x-sm{
+    margin-left: $phone-space-sm;
+    margin-right: $phone-space-sm;
+  }
+  .u-m-x-md{
+    margin-left: $phone-space-md;
+    margin-right: $phone-space-md;
+  }
+  .u-m-x-lg{
+    margin-left: $phone-space-lg;
+    margin-right: $phone-space-lg;
+  }
+
+  .u-m-y{
+    margin-top: $phone-space;
+    margin-bottom: $phone-space;
+  }
+  .u-m-y-xs{
+    margin-top: $phone-space-xs;
+    margin-bottom: $phone-space-xs;
+  }
+  .u-m-y-sm{
+    margin-top: $phone-space-sm;
+    margin-bottom: $phone-space-sm;
+  }
+  .u-m-y-md{
+    margin-top: $phone-space-md;
+    margin-bottom: $phone-space-md;
+  }
+  .u-m-y-lg{
+    margin-top: $phone-space-lg;
+    margin-bottom: $phone-space-lg;
+
+  }
+
+  .u-m-t{
+    margin-top: $phone-space;
+  }
+  .u-m-t-xs{
+    margin-top: $phone-space-xs;
+  }
+  .u-m-t-sm{
+    margin-top: $phone-space-sm;
+  }
+  .u-m-t-md{
+    margin-top: $phone-space-md;
+  }
+  .u-m-t-lg{
+    margin-top: $phone-space-lg;
+  }
+
+  .u-m-b{
+    margin-bottom: $phone-space;
+  }
+  .u-m-b-xs{
+    margin-bottom: $phone-space-xs;
+  }
+  .u-m-b-sm{
+    margin-bottom: $phone-space-sm;
+  }
+  .u-m-b-md{
+    margin-bottom: $phone-space-md;
+  }
+  .u-m-b-lg{
+    margin-bottom: $phone-space-lg;
+  }
+
+  .u-m-l{
+    margin-left: $phone-space;
+  }
+  .u-m-l-xs{
+    margin-left: $phone-space-xs;
+  }
+  .u-m-l-sm{
+    margin-left: $phone-space-sm;
+  }
+  .u-m-l-md{
+    margin-left: $phone-space-md;
+  }
+  .u-m-l-lg{
+    margin-left: $phone-space-lg;
+  }
+
+  .u-m-r{
+    margin-right: $phone-space;
+  }
+  .u-m-r-xs{
+    margin-right: $phone-space-xs;
+  }
+  .u-m-r-sm{
+    margin-right: $phone-space-sm;
+  }
+  .u-m-r-md{
+    margin-right: $phone-space-md;
+  }
+  .u-m-r-lg{
+    margin-right: $phone-space-lg;
+  }
+
+}
+@include responsive(tab-port){
+  .u-m{
+    margin: $tab-port-space;
+  }
+  .u-m-xs{
+    margin: $tab-port-space-xs;
+  }
+  .u-m-sm{
+    margin: $tab-port-space-sm;
+  }
+  .u-m-md{
+    margin: $tab-port-space-md;
+  }
+  .u-m-lg{
+    margin: $tab-port-space-lg;
+  }
+
+  .u-m-x{
+    margin-left: $tab-port-space;
+    margin-right: $tab-port-space;
+  }
+  .u-m-x-xs{
+    margin-left: $tab-port-space-xs;
+    margin-right: $tab-port-space-xs;
+  }
+  .u-m-x-sm{
+    margin-left: $tab-port-space-sm;
+    margin-right: $tab-port-space-sm;
+  }
+  .u-m-x-md{
+    margin-left: $tab-port-space-md;
+    margin-right: $tab-port-space-md;
+  }
+  .u-m-x-lg{
+    margin-left: $tab-port-space-lg;
+    margin-right: $tab-port-space-lg;
+  }
+
+  .u-m-y{
+    margin-top: $tab-port-space;
+    margin-bottom: $tab-port-space;
+  }
+  .u-m-y-xs{
+    margin-top: $tab-port-space-xs;
+    margin-bottom: $tab-port-space-xs;
+  }
+  .u-m-y-sm{
+    margin-top: $tab-port-space-sm;
+    margin-bottom: $tab-port-space-sm;
+  }
+  .u-m-y-md{
+    margin-top: $tab-port-space-md;
+    margin-bottom: $tab-port-space-md;
+  }
+  .u-m-y-lg{
+    margin-top: $tab-port-space-lg;
+    margin-bottom: $tab-port-space-lg;
+
+  }
+
+  .u-m-t{
+    margin-top: $tab-port-space;
+  }
+  .u-m-t-xs{
+    margin-top: $tab-port-space-xs;
+  }
+  .u-m-t-sm{
+    margin-top: $tab-port-space-sm;
+  }
+  .u-m-t-md{
+    margin-top: $tab-port-space-md;
+  }
+  .u-m-t-lg{
+    margin-top: $tab-port-space-lg;
+  }
+
+  .u-m-b{
+    margin-bottom: $tab-port-space;
+  }
+  .u-m-b-xs{
+    margin-bottom: $tab-port-space-xs;
+  }
+  .u-m-b-sm{
+    margin-bottom: $tab-port-space-sm;
+  }
+  .u-m-b-md{
+    margin-bottom: $tab-port-space-md;
+  }
+  .u-m-b-lg{
+    margin-bottom: $tab-port-space-lg;
+  }
+
+  .u-m-l{
+    margin-left: $tab-port-space
+  }
+  .u-m-l-xs{
+    margin-left: $tab-port-space-xs;
+  }
+  .u-m-l-sm{
+    margin-left: $tab-port-space-sm;
+  }
+  .u-m-l-md{
+    margin-left: $tab-port-space-md;
+  }
+  .u-m-l-lg{
+    margin-left: $tab-port-space-lg;
+  }
+
+  .u-m-r{
+    margin-right: $tab-port-space;
+  }
+  .u-m-r-xs{
+    margin-right: $tab-port-space-xs;
+  }
+  .u-m-r-sm{
+    margin-right: $tab-port-space-sm;
+  }
+  .u-m-r-md{
+    margin-right: $tab-port-space-md;
+  }
+  .u-m-r-lg{
+    margin-right: $tab-port-space-lg;
+  }
+}

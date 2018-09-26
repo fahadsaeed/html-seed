@@ -44,12 +44,19 @@ var htmlmin = require('gulp-htmlmin');
 // CSS minify
 var cssnano = require('gulp-cssnano');
 
+// add auto pre_fixer in css
+var postcss      = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+
 // Convert ES6 to ES5 js
 var babel = require('gulp-babel');
 
 gulp.task('sass', function(){
     return gulp.src('src/sass/*.scss')
         .pipe(sass()) // Converts Sass to CSS with gulp-sass
+        .pipe(postcss(
+            [autoprefixer({browsers: ['last 10 version']})]
+        ))   // add auto prefixer in css
         .pipe(gulp.dest('src/client/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -93,8 +100,7 @@ gulp.task('clean:dist', function() {
 
 
 gulp.task('build', function () {
-    runSequence('clean:dist',
-        ['sass', 'useref', 'assets'],
+    runSequence('clean:dist', ['sass', 'assets'], ['useref'],
         function (cb) {
             gulp.start('build:minify');
         }
